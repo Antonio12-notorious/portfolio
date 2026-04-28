@@ -1,0 +1,78 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
+
+:root {
+ 
+  /* --font-display: "Space Grotesk", sans-serif; */
+  
+  /* Light Theme (Day) - Enhanced for better visibility */
+  --color-brand-primary: #020617; /* Stronger Black (Deep Slate) */
+  --color-brand-accent: #2563eb;
+  --color-brand-surface: #ffffff;
+  --color-card-surface: #f1f5f9;
+  --color-border-dim: rgba(0, 0, 0, 0.1);
+  --color-text-dim: #334155; /* Darker grey for better readability */
+}
+
+.dark {
+  /* Dark Theme (Night - Elegant Dark) */
+  --color-brand-primary: #f8fafc;
+  --color-brand-accent: #0ea5e9;
+  --color-brand-surface: #020617;
+  --color-card-surface: #0f172a;
+  --color-border-dim: rgba(255, 255, 255, 0.08);
+  --color-text-dim: #94a3b8;
+}
+
+@theme {
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-accent: var(--color-brand-accent);
+  --color-brand-surface: var(--color-brand-surface);
+  --color-card-surface: var(--color-card-surface);
+  --color-border-dim: var(--color-border-dim);
+  --color-text-dim: var(--color-text-dim);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-surface text-brand-primary antialiased;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-brand-primary;
+  }
+}
+
+/* Custom Cursor or smooth scroll */
+html {
+  scroll-behavior: smooth;
+  background-color: #050505;
+}
+
+/* Elegant Dark Shadow */
+.accent-glow {
+  box-shadow: 0 0 15px rgba(0, 188, 235, 0.3);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border-dim);
+}
+
+/* Card patterns */
+.card {
+  @apply bg-card-surface border border-border-dim rounded-xl p-6 transition-all;
+}
+
+.card:hover {
+  @apply border-brand-accent/30;
+}
+
+/* Pill pattern */
+.pill {
+  @apply px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-bold border border-brand-accent text-brand-accent;
+}
