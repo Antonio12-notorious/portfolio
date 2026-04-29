@@ -12,6 +12,7 @@ interface MainLayoutProps {
 export default function MainLayout({ children }: MainLayoutProps) {
   const location = useLocation();
   const [isDark, setIsDark] = useState(true);
+  
 
   useEffect(() => {
     if (isDark) {
@@ -22,11 +23,26 @@ export default function MainLayout({ children }: MainLayoutProps) {
   }, [isDark]);
 
   const socialLinks = [
-    { icon: <Linkedin size={20} />, href: 'https://linkedin.com/in/vanildo-silva', label: 'LinkedIn' },
-    { icon: <Github size={20} />, href: 'https://github.com/vanildo12', label: 'GitHub' },
-    { icon: <MessageCircle size={20} />, href: 'https://wa.me/258878668672', label: 'WhatsApp' },
-    { icon: <Mail size={20} />, href: 'mailto:vanildoantonio19@gmail.com', label: 'Email' },
-    // { icon: <Facebook size={20} />, href: 'https://facebook.com/vanildodasilva', label: 'Facebook' }
+    {
+      icon: <Linkedin size={20} />,
+      href: "https://linkedin.com/in/vanildo-antónio-815930196",
+      label: "LinkedIn",
+    },
+    {
+      icon: <Github size={20} />,
+      href: "https://github.com/Antonio12-notorious",
+      label: "GitHub",
+    },
+    {
+      icon: <MessageCircle size={20} />,
+      href: "https://wa.me/258878668672",
+      label: "WhatsApp",
+    },
+    {
+      icon: <Mail size={20} />,
+      href: "mailto:vanildoantonio19@gmail.com",
+      label: "Email",
+    },
   ];
 
   return (
@@ -55,7 +71,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
               animate={{ y: 0, rotate: 0 }}
               exit={{ y: -20, rotate: -45 }}
             >
-              <Sun size={24} />
+              <Sun size={24} className="text-white" />
             </motion.div>
           )}
         </AnimatePresence>

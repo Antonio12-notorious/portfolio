@@ -1,14 +1,14 @@
 
 export const socialLinks = [
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/vanildosilva', icon: 'Linkedin' },
-  { name: 'GitHub', url: 'https://github.com/vanildosilva', icon: 'Github' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/vanildo-antónio-815930196', icon: 'Linkedin' },
+  { name: 'GitHub', url: 'https://github.com/Antonio12-notorious', icon: 'Github' },
   { name: 'Twitter', url: 'https://twitter.com/vanildosilva', icon: 'Twitter' },
   { name: 'Instagram', url: 'https://instagram.com/vanildosilva', icon: 'Instagram' },
-  { name: 'Facebook', url: 'https://facebook.com/vanildodasilva', icon: 'Facebook' },
 ];
 
 
 export const contactInfo = {
+
   email: 'vanildoantonio19@gmail.com',
   phone: '+258 878668672',
   location: 'Cidade da Beira, Moçambique',
@@ -111,17 +111,17 @@ export const projects: Project[] = [
     description: 'Desenvolvimento de websites e sistemas internos.',
     longDescription: `Estágio de dois anos focado na criação de websites institucionais e sistemas de gestão de tickets para suporte técnico.
     Focado em interfaces intuitivas e robustez de sistemas corporativos.`,
-    technologies: ['Web Design', 'Sistemas', 'JavaScript', 'Frontend'],
+    technologies: ['Web Design', 'Sistemas', 'JavaScript', 'Frontend', 'FullStack'],
     imageUrl: 'CrysTech.png',
     link: 'https://ais-pre-bkzdo7v2yvqdhsyspen6iu-158147275879.europe-west3.run.app',
   },
   {
     id: '4',
-    title: 'Engenharia de Processos Industriais',
+    title: 'StoreIt',
     description: 'Automação e optimização de sistemas de produção.',
     longDescription: `Projectos académicos e práticos focados na simbiose entre software de gestão e linhas de produção física.
     Aplicação de conceitos de instrumentação e controlo de processos químicos e físicos.`,
-    technologies: ['Sistemas', 'Automação', 'IoT', 'FullStack'],
+    technologies: ['Sistemas', 'Automação', 'IoT', 'FullStack', 'JavaScript'],
     imageUrl: 'storeit.png',
   },
 ];

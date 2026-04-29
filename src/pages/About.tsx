@@ -179,7 +179,7 @@ export default function About() {
           </div>
           <div className="flex-1 w-full aspect-video md:aspect-square bg-card-surface rounded-[3rem] border border-border-dim p-4 overflow-hidden group">
             <img
-              src="https://picsum.photos/seed/network-core/800/800"
+              src="https://tnb.studio/storage/blog/quais-sao-as-vantagens-de-uma-consultoria-de-marketing-em-seu-negocio1627403143.jpg"
               alt="Data Center"
               className="w-full h-full object-cover rounded-[2.5rem] opacity-50 group-hover:opacity-80 transition-all duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"
@@ -192,7 +192,7 @@ export default function About() {
       <section className="bg-card-surface rounded-[3rem] p-12 md:p-24 border border-border-dim">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
-            { label: "Projectos", value: "12+" },
+            { label: "Projectos", value: "10+" },
             { label: "Cisco Certs", value: "03" },
             { label: "Anos Exp.", value: "05" },
             { label: "Performance", value: "100%" },

@@ -82,7 +82,7 @@ export default function Navbar() {
       <motion.div
         initial={false}
         animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-        className="md:hidden overflow-hidden glass rounded-2xl mt-2 mx-4"
+        className="md:hidden overflow-hidden text-brand-primary rounded-2xl mt-2 mx-4"
       >
         <div className="py-6 px-8 flex flex-col gap-4">
           {navItems.map((item) => (
@@ -91,7 +91,7 @@ export default function Navbar() {
               to={item.path}
               onClick={() => setIsOpen(false)}
               className={cn(
-                'text-lg font-medium transition-colors flex items-center gap-3',
+                'text-lg font-medium transition-colors flex items-center gap-3 ',
                 location.pathname === item.path
                   ? 'text-brand-accent'
                   : 'text-text-dim hover:text-white'
