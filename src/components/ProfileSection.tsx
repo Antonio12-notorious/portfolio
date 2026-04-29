@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
 import { socialLinks, contactInfo } from '../data/portfolioData';
-import profileImg from '../assets/images/profile.png';
+import profileImg from '../assets/images/profile.webp';
 
 const iconMap: Record<string, any> = {
   Linkedin: <Linkedin size={20} />,

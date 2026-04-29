@@ -5,7 +5,7 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import SkillsSection from '../components/SkillsSection';
 import ProfileSection from '../components/ProfileSection';
 import { cvUrl } from '../data/portfolioData';
-import profileImg from '../assets/images/profile.png'
+import profileImg from '../assets/images/profile.webp'
 
 const MotionLink = motion(Link);
 
