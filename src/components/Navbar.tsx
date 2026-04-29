@@ -26,13 +26,15 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4', 'bg-brand-surface border-b border-border-dim' 
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
+        "bg-brand-surface border-b border-border-dim",
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link
           to="/"
           className="flex items-center gap-2 group"
+          aria-label="Vanildo António - Home"
           onClick={() => setIsOpen(false)}
         >
           <div className="w-10 h-10 bg-brand-accent rounded-xl flex items-center justify-center text-white group-hover:rotate-6 transition-transform">
@@ -50,10 +52,10 @@ export default function Navbar() {
               key={item.path}
               to={item.path}
               className={cn(
-                'text-sm font-medium transition-colors flex items-center gap-3',
+                "text-sm font-medium transition-colors flex items-center gap-3",
                 location.pathname === item.path
-                  ? 'text-brand'
-                  : 'text-text-dim'
+                  ? "text-brand"
+                  : "text-text-dim",
               )}
             >
               {location.pathname === item.path ? (
@@ -73,15 +75,22 @@ export default function Navbar() {
         <button
           className="md:hidden p-2 text-brand-primary"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={
+            isOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"
+          }
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} aria-hidden="true" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       <motion.div
         initial={false}
-        animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+        animate={
+          isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }
+        }
         className="md:hidden overflow-hidden text-brand-primary rounded-2xl mt-2 mx-4"
       >
         <div className="py-6 px-8 flex flex-col gap-4">
@@ -91,10 +100,10 @@ export default function Navbar() {
               to={item.path}
               onClick={() => setIsOpen(false)}
               className={cn(
-                'text-lg font-medium transition-colors flex items-center gap-3 ',
+                "text-lg font-medium transition-colors flex items-center gap-3 ",
                 location.pathname === item.path
-                  ? 'text-brand-accent'
-                  : 'text-text-dim hover:text-white'
+                  ? "text-brand-accent"
+                  : "text-text-dim hover:text-white",
               )}
             >
               {location.pathname === item.path && (

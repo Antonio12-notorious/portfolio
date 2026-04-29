@@ -51,6 +51,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
 
       {/* Theme Toggle Floating */}
       <button
+        aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
         onClick={() => setIsDark(!isDark)}
         className="fixed bottom-8 right-8 z-[60] w-14 h-14 glass rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform text-brand-accent group overflow-hidden"
       >
@@ -62,7 +63,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
               animate={{ y: 0, rotate: 0 }}
               exit={{ y: -20, rotate: -45 }}
             >
-              <Moon size={24} />
+              <Moon size={24} aria-hidden="true" />
             </motion.div>
           ) : (
             <motion.div
@@ -71,7 +72,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
               animate={{ y: 0, rotate: 0 }}
               exit={{ y: -20, rotate: -45 }}
             >
-              <Sun size={24} className="text-white" />
+              <Sun size={24} className="text-white" aria-hidden="true" />
             </motion.div>
           )}
         </AnimatePresence>
